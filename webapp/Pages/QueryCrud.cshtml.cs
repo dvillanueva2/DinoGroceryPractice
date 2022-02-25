@@ -80,11 +80,15 @@ namespace MyApp.Namespace
 						Product.Taxable = true;
 					else
 						Product.Taxable = false;
-					//FormatValidation();
+					FormatValidation();
 					//Product.ProductId = ProductServices.Add(Product);
 					SuccessMessage = "Update Successful";
 				}
-
+				if(Product.ProductId != 0)
+				{
+						Product = ProductServices.Retrieve(Product.ProductId);
+						SuccessMessage = "Product Retrieve Successful";
+				}
 				else 
 				{
 					ErrorMessage = "Danger: At the end of our ropes!";
@@ -103,6 +107,7 @@ namespace MyApp.Namespace
 			return Page();
 		}
 
+        
         private void PopulateSelectLists()
         {
             try
@@ -130,6 +135,21 @@ namespace MyApp.Namespace
 			{ 
 				ErrorMessage = GetInnerException(ex);
 			}
+		}
+
+		private void FormatValidation()
+        {
+			if(string.IsNullOrEmpty(Product.ProductName))
+				Errors.Add(new Exception("ProductName"));
+			// if(Product.SupplierId == 0)
+			// 	Errors.Add(new Exception("SupplierId"));
+			if(Product.CategoryId == 0)
+				Errors.Add(new Exception("CategoryId"));
+			if(string.IsNullOrEmpty(Product.UnitSize))
+				Errors.Add(new Exception("UnitSize"));
+			
+			if (Errors.Count() > 0)
+					throw new AggregateException("Invalid Data: ", Errors);
 		}
 
         public string GetInnerException(Exception e)

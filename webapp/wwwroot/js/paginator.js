@@ -44,7 +44,7 @@
  *
  * }
  */
- function paginator(config) {
+function paginator(config) {
     // throw errors if insufficient parameters were given
     if (typeof config != "object")
         throw "Paginator was expecting a config object!";

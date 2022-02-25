@@ -90,6 +90,102 @@
             
            
         </div>
+        <div class="col-1"></div>
+        <div class="col-5">
+            <h5>Product Crud</h5>
+            <div class="row mb-3">
+                <div class="col">
+                    <label for="ProductId" class="col-form-label">Id</label>
+                    <input type="number" class="form-control" readonly id="ProductId" 
+                        name="Product.ProductId" value="@Model.Product.ProductId" />
+                </div>
+                <div class="col">
+                    <label for="ProductName" class="col-form-label">Name</label>
+                    <input type="text" class="form-control" id="ProductName" 
+                        name="Product.ProductName" value="@Model.Product.ProductName" />
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col">
+                    <label for="CategoryId" class="col-form-label">Category</label>
+                        <select class="form-select" id="CategoryId" name="Product.CategoryId">
+                            <option value="0">select ...</option>
+                            @foreach (var item in Model.SelectListOfCategories)
+                            {
+                                <option value="@item.ValueField" 
+                                selected=@(Model.Product.CategoryId == item.ValueField)>
+                                @item.DisplayField
+                                </option>
+                            }
+                        </select>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col">
+                    <label for="UnitSize" class="col-form-label">
+                        Quantity Per Unit
+                    </label>
+                    <input type="text" class="form-control" id="UnitSize" 
+                        name="Product.UnitSize" value="@Model.Product.UnitSize"/>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col">
+                    <label for="UnitPrice" class="col-form-label">Unit Price</label>
+                    <input type="number" class="form-control" id="Price" 
+                        name="Product.Price" value="@Model.Product.Price"/>
+                </div>
+                <div class="col">
+                    <label for="Discount" class="col-form-label">
+                        Discount
+                    </label>
+                    <input type="number" class="form-control" id="Discount" 
+				        name="Product.Discount" value="@Model.Product.Discount"/>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col mt-2">
+                    <label for="Taxable" class="form-check-label">Taxable</label>
+                    <input type="checkbox" class="form-check-input" id="Taxable" 
+                        name="Taxable" 
+                        value="@Model.Taxable"
+                        checked="@Model.Product.Taxable"/>
+                </div>
+            </div>
+
+            <div class="row mb-3 justify-content-center">
+                <div class="col-2">
+                    <button type="submit" class="btn btn-dark"
+                        disabled=@(Model.Product.ProductId != 0)
+                        name="ButtonPressed" value="Add">&nbsp;Add&nbsp;&nbsp;&nbsp;</button>
+                </div>
+                <div class="col-2">
+                    <button type="submit" class="btn btn-dark"
+                        disabled=@(Model.Product.ProductId == 0)
+                        name="ButtonPressed" value="Update">Update</button>
+                </div>
+                <div class="col-2">
+                    <button type="submit" class="btn btn-dark"
+                        disabled=@(Model.Product.ProductId == 0)
+                        name="ButtonPressed" value="Delete">Delete</button>
+                </div>
+                <div class="col-2">
+                    <button type="submit" class="btn btn-dark"
+                        disabled=@(Model.Product.ProductId != 0)
+                        name="ButtonPressed" value="Clear">Clear</button>
+                </div>
+            </div>           
+        
+            @if(!string.IsNullOrEmpty(Model.ErrorMessage))
+            {
+                <p class="error-message">@Model.ErrorMessage</p>
+            }
+
+            @if(!string.IsNullOrEmpty(Model.SuccessMessage))
+            {
+                <p class="success-message">@Model.SuccessMessage</p>
+            }
+        </div>
     </div>
 </form>
 

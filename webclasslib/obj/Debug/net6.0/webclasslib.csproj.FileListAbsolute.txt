@@ -1,0 +1,14 @@
+H:\DMIT2018-lessons\DinoGroceryPractice\webclasslib\bin\Debug\net6.0\webclasslib.deps.json
+H:\DMIT2018-lessons\DinoGroceryPractice\webclasslib\bin\Debug\net6.0\webclasslib.dll
+H:\DMIT2018-lessons\DinoGroceryPractice\webclasslib\bin\Debug\net6.0\ref\webclasslib.dll
+H:\DMIT2018-lessons\DinoGroceryPractice\webclasslib\bin\Debug\net6.0\webclasslib.pdb
+H:\DMIT2018-lessons\DinoGroceryPractice\webclasslib\obj\Debug\net6.0\webclasslib.csproj.AssemblyReference.cache
+H:\DMIT2018-lessons\DinoGroceryPractice\webclasslib\obj\Debug\net6.0\webclasslib.GeneratedMSBuildEditorConfig.editorconfig
+H:\DMIT2018-lessons\DinoGroceryPractice\webclasslib\obj\Debug\net6.0\webclasslib.AssemblyInfoInputs.cache
+H:\DMIT2018-lessons\DinoGroceryPractice\webclasslib\obj\Debug\net6.0\webclasslib.AssemblyInfo.cs
+H:\DMIT2018-lessons\DinoGroceryPractice\webclasslib\obj\Debug\net6.0\webclasslib.csproj.CoreCompileInputs.cache
+H:\DMIT2018-lessons\DinoGroceryPractice\webclasslib\obj\Debug\net6.0\webclasslib.dll
+H:\DMIT2018-lessons\DinoGroceryPractice\webclasslib\obj\Debug\net6.0\ref\webclasslib.dll
+H:\DMIT2018-lessons\DinoGroceryPractice\webclasslib\obj\Debug\net6.0\webclasslib.pdb
+H:\DMIT2018-lessons\DinoGroceryPractice\webclasslib\bin\Debug\net6.0\webclasslib.runtimeconfig.json
+H:\DMIT2018-lessons\DinoGroceryPractice\webclasslib\obj\Debug\net6.0\webclasslib.genruntimeconfig.cache
